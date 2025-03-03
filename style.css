@@ -22,9 +22,11 @@ body {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -73,9 +75,11 @@ body {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1);
     }
@@ -116,4 +120,19 @@ button:active {
     margin-top: 20px;
     font-size: 14px;
     color: #fff;
+}
+
+.Name {
+    font-family: cursive;
+    font-size: 15px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: rgb(129, 105, 105);
+}
+
+@media screen and (max-width: 768px) {
+    .Name {
+        bottom: -5px;
+    }
 }
