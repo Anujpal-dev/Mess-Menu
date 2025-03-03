@@ -1,0 +1,119 @@
+/* Updated style.css for Apple-like UI design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #FF9A8B, #FF6A88, #FF99AC, #FFDBA4, #A3DAF6, #78C2F2);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 36px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 280px;
+    text-align: center;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 4px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FF9A8B, #FF6A88, #FF99AC, #FFDBA4, #A3DAF6, #78C2F2);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.circle.breathing {
+    animation: breathing 1.5s infinite;
+}
+
+@keyframes breathing {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+h1 {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 28px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #007aff, #0051cc);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button.stop {
+    background: linear-gradient(135deg, #ff4b4b, #cc0000);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+.menu {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff;
+}
